@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مسابقة الماكرزا - نظام التحديات</title>
+    <link rel="stylesheet" href="login home/A2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- شريط التنقل -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">مسابقة الماكرزا</a>
+            <div class="nav-links">
+                    <a href="#" class="active">التحديات</a>
+                <a href="login.html" id="adminLink" style="display:none;">إدارة التطبيق</a>
+                <div class="auth-buttons">
+                    <button id="loginBtn">تسجيل الدخول</button>
+                    <button id="logoutBtn" style="display:none;">تسجيل الخروج</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- نموذج تسجيل الدخول -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>تسجيل الدخول</h2>
+            <form id="loginForm">
+                <input type="text" id="username" placeholder="اسم المستخدم" required>
+                <input type="password" id="password" placeholder="كلمة المرور" required>
+                <button type="submit">دخول</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- المحتوى الرئيسي -->
+    <div class="container main-content">
+        <header class="competition-header">
+            <h1>أصلًا بك في مسابقة الماكرزا</h1>
+            <p>اختر يومازات الأمنية حول التحديات لتنوع فاحثك.</p>
+        </header>
+
+        <div class="challenges-container">
+            <!-- باقي محتوى التحديات كما في الإصدار السابق -->
+            <div id="challengesContent"></div>
+        </div>
+    </div>
+
+            <script src="login home/login.js"></script>
+        </body>
+        </html>

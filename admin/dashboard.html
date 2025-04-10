@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة التحكم - نظام التحديات</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="dashboard-page">
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <i class="fas fa-trophy logo-icon"></i>
+            <h2>نظام التحديات</h2>
+        </div>
+        
+        <nav class="sidebar-nav">
+            <a href="dashboard.html" class="active">
+                <i class="fas fa-tachometer-alt"></i> لوحة التحكم
+            </a>
+            <a href="challenges.html">
+                <i class="fas fa-flag"></i> إدارة التحديات
+            </a>
+            <a href="#">
+                <i class="fas fa-users"></i> إدارة المستخدمين
+            </a>
+            <a href="#">
+                <i class="fas fa-cog"></i> الإعدادات
+            </a>
+        </nav>
+        
+        <div class="sidebar-footer">
+            <a href="#" id="logoutBtn">
+                <i class="fas fa-sign-out-alt"></i> تسجيل الخروج
+            </a>
+        </div>
+    </div>
+    
+    <div class="main-content">
+        <header class="topbar">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="بحث...">
+            </div>
+            
+            <div class="user-profile">
+                <img src="../../assets/img/avatar.png" alt="صورة المستخدم">
+                <span>مدير النظام</span>
+            </div>
+        </header>
+        
+        <main class="content">
+            <h1><i class="fas fa-tachometer-alt"></i> لوحة التحكم</h1>
+            
+            <div class="stats-cards">
+                <div class="stat-card">
+                    <div class="stat-icon bg-blue">
+                        <i class="fas fa-flag"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>التحديات النشطة</h3>
+                        <p id="activeChallengesCount">0</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon bg-green">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>المستخدمين</h3>
+                        <p id="usersCount">0</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon bg-orange">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>تحديات قادمة</h3>
+                        <p id="upcomingChallengesCount">0</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon bg-purple">
+                        <i class="fas fa-archive"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>تحديات منتهية</h3>
+                        <p id="completedChallengesCount">0</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="recent-challenges">
+                <h2><i class="fas fa-history"></i> أحدث التحديات</h2>
+                <div class="table-responsive">
+                    <table id="recentChallengesTable">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>عنوان التحدي</th>
+                                <th>تاريخ البدء</th>
+                                <th>تاريخ الانتهاء</th>
+                                <th>الحالة</th>
+                                <th>الإجراءات</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- سيتم ملؤها بالبيانات من JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

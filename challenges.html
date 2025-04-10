@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>التحديات | مسابقة الهاكرز</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="assets/logo.png" alt="شعار المسابقة">
+                <h1>مسابقة الهاكرز CTF</h1>
+            </div>
+            <nav>
+                <a href="index.html">الرئيسية</a>
+                <a href="challenges.html" class="active">التحديات</a>
+                <a href="scoreboard.html">النتائج</a>
+                <a href="#" class="login-btn">تسجيل دخول</a>
+            </nav>
+        </header>
+
+        <main>
+            <section class="challenges-section">
+                <h2>التحديات المتاحة</h2>
+                
+                <div class="filter-bar">
+                    <select id="category-filter">
+                        <option value="all">كل الفئات</option>
+                        <option value="web">أمن الويب</option>
+                        <option value="crypto">التشفير</option>
+                        <option value="forensics">التحقيق الجنائي</option>
+                    </select>
+                    
+                    <select id="difficulty-filter">
+                        <option value="all">كل المستويات</option>
+                        <option value="easy">سهل</option>
+                        <option value="medium">متوسط</option>
+                        <option value="hard">صعب</option>
+                    </select>
+                </div>
+                
+                <div class="challenges-grid" id="challenges-grid">
+                    <!-- سيتم ملؤها بالجافاسكريبت -->
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>© 2023 مسابقة الهاكرز. جميع الحقوق محفوظة.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

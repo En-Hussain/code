@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل فريق جديد | مسابقة CTF</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <img src="assets/logo.png" alt="شعار المسابقة" class="logo">
+            <h2>تسجيل فريق جديد</h2>
+            
+            <form id="register-form">
+                <div class="form-group">
+                    <label for="team-name">اسم الفريق:</label>
+                    <input type="text" id="team-name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">كلمة المرور:</label>
+                    <input type="password" id="password" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="confirm-password">تأكيد كلمة المرور:</label>
+                    <input type="password" id="confirm-password" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="members">أعضاء الفريق (افصل بين الأسماء بفاصلة):</label>
+                    <textarea id="members" rows="3"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="category">فئة الفريق:</label>
+                    <select id="category" required>
+                        <option value="students">طلاب</option>
+                        <option value="professional">محترفون</option>
+                        <option value="companies">شركات</option>
+                    </select>
+                </div>
+                
+                <button type="submit" class="btn-primary">تسجيل الفريق</button>
+            </form>
+            
+            <div class="links">
+                <a href="login.html">لديك حساب؟ سجل دخول</a>
+                <a href="index.html">العودة للرئيسية</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="auth.js"></script>
+</body>
+</html>

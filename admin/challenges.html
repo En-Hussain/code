@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إدارة التحديات - نظام التحديات</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="dashboard-page">
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <i class="fas fa-trophy logo-icon"></i>
+            <h2>نظام التحديات</h2>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> لوحة التحكم</a>
+            <a href="challenges.html" class="active"><i class="fas fa-flag"></i> إدارة التحديات</a>
+            <a href="users.html"><i class="fas fa-users"></i> إدارة المستخدمين</a>
+        </nav>
+    </div>
+    
+    <div class="main-content">
+        <header class="topbar">
+            <div class="user-profile">
+                <img src="../assets/img/avatar.png" alt="صورة المستخدم">
+                <span id="usernameDisplay">مدير النظام</span>
+            </div>
+        </header>
+        
+        <main class="content" role="main">
+            <div class="page-header">
+                <h1><i class="fas fa-flag" aria-hidden="true"></i> إدارة التحديات</h1>
+                <button class="btn-primary" id="addChallengeBtn" aria-label="إضافة تحدي جديد">
+                    <i class="fas fa-plus"></i> إضافة تحدي جديد
+                </button>
+            </div>
+            
+            <div class="filter-bar">
+                <div class="filter-group">
+                    <label for="statusFilter">تصفية حسب الحالة:</label>
+                    <select id="statusFilter" aria-label="تصفية التحديات حسب الحالة">
+                        <option value="all">الكل</option>
+                        <option value="active">نشطة</option>
+                        <option value="upcoming">قادمة</option>
+                        <option value="completed">منتهية</option>
+                    </select>
+                </div>
+                
+                <div class="search-box">
+                    <i class="fas fa-search" aria-hidden="true"></i>
+                    <input type="text" id="challengeSearch" placeholder="ابحث عن تحديات..." aria-label="بحث التحديات">
+                </div>
+            </div>
+            
+            <div class="table-responsive">
+                <table id="challengesTable" aria-label="جدول التحديات">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">عنوان التحدي</th>
+                            <th scope="col">الوصف</th>
+                            <th scope="col">تاريخ البدء</th>
+                            <th scope="col">تاريخ الانتهاء</th>
+                            <th scope="col">المشاركون</th>
+                            <th scope="col">الحالة</th>
+                            <th scope="col">الإجراءات</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- سيتم ملؤها بالبيانات من JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- نموذج إضافة/تعديل التحدي -->
+            <div class="modal" id="challengeModal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modalTitle">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 id="modalTitle">إضافة تحدي جديد</h3>
+                        <button class="close-modal" aria-label="إغلاق النافذة">&times;</button>
+                    </div>
+                    
+                    <form id="challengeForm">
+                        <input type="hidden" id="challengeId">
+                        
+                        <div class="form-group">
+                            <label for="challengeTitle">عنوان التحدي</label>
+                            <input type="text" id="challengeTitle" required aria-required="true">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="challengeDescription">وصف التحدي</label>
+                            <textarea id="challengeDescription" rows="4" required aria-required="true"></textarea>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="startDate">تاريخ البدء</label>
+                                <input type="datetime-local" id="startDate" required aria-required="true">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="endDate">تاريخ الانتهاء</label>
+                                <input type="datetime-local" id="endDate" required aria-required="true">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="challengeLevel">مستوى الصعوبة</label>
+                            <select id="challengeLevel" required aria-required="true">
+                                <option value="easy">سهل</option>
+                                <option value="medium">متوسط</option>
+                                <option value="hard">صعب</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="challengeImage">صورة التحدي (اختياري)</label>
+                            <input type="file" id="challengeImage" accept="image/*">
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="button" class="btn-secondary close-modal">إلغاء</button>
+                            <button type="submit" class="btn-primary">حفظ التحدي</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>
